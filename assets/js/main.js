@@ -18,7 +18,7 @@ const WEATHER_IMAGE = {
 }
 
 const GEOCODING_API = {
-   endpoint: 'http://api.openweathermap.org/geo/1.0/direct?q={CITY_NAME}&limit={RETRIEVAL_LIMIT}&appid={API_KEY}',
+   endpoint: 'https://api.openweathermap.org/geo/1.0/direct?q={CITY_NAME}&limit={RETRIEVAL_LIMIT}&appid={API_KEY}',
    regex: {
       cityName: '{CITY_NAME}',
       retrievalLimit: '{RETRIEVAL_LIMIT}',
