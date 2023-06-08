@@ -1,4 +1,12 @@
 import '../css/main.css';
+import clearIcon from '../images/wt-1.svg';
+import hazeIcon from '../images/wt-3.svg';
+import cloudsIcon from '../images/wt-7.svg';
+import fogIcon from '../images/wt-9.svg';
+import rainIcon from '../images/wt-19.svg';
+import thunderstormIcon from '../images/wt-22.svg';
+import snowIcon from '../images/wt-30.svg';
+import unknownIcon from '../images/wt-36.svg';
 
 const ENV = {
    cityName: 'Fortaleza',
@@ -7,14 +15,14 @@ const ENV = {
 }
 
 const WEATHER_IMAGE = {
-   Clear: "assets/images/wt-1.svg",
-   Haze: "assets/images/wt-3.svg",
-   Clouds: "assets/images/wt-7.svg",
-   Fog: "assets/images/wt-9.svg",
-   Rain: "assets/images/wt-19.svg",
-   Thunderstorm: "assets/images/wt-22.svg",
-   Snow: "assets/images/wt-30.svg",
-   Unknown: "assets/images/wt-36.svg",
+   Clear: clearIcon,
+   Haze: hazeIcon,
+   Clouds: cloudsIcon,
+   Fog: fogIcon,
+   Rain: rainIcon,
+   Thunderstorm: thunderstormIcon,
+   Snow: snowIcon,
+   Unknown: unknownIcon,
 }
 
 const GEOCODING_API = {
