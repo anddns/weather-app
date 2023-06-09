@@ -1,28 +1,17 @@
-import '../css/main.css';
-import clearIcon from '../images/wt-1.svg';
-import hazeIcon from '../images/wt-3.svg';
-import cloudsIcon from '../images/wt-7.svg';
-import fogIcon from '../images/wt-9.svg';
-import rainIcon from '../images/wt-19.svg';
-import thunderstormIcon from '../images/wt-22.svg';
-import snowIcon from '../images/wt-30.svg';
-import unknownIcon from '../images/wt-36.svg';
+import '../../assets/css/main.css';
 
-const ENV = {
-   cityName: 'Fortaleza',
-   retrievalLimit: 1,
-   apiKey: '3abd3e7b70aba327ee2b70bd62f49d1c'
-}
+const RETRIEVAL_LIMIT = import.meta.env.VITE_RETRIEVAL_LIMIT;
+const OPENWEATHER_API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 
 const WEATHER_IMAGE = {
-   Clear: clearIcon,
-   Haze: hazeIcon,
-   Clouds: cloudsIcon,
-   Fog: fogIcon,
-   Rain: rainIcon,
-   Thunderstorm: thunderstormIcon,
-   Snow: snowIcon,
-   Unknown: unknownIcon,
+   Clear: 'clear.svg',
+   Haze: 'haze.svg',
+   Clouds: 'clouds.svg',
+   Fog: 'fog.svg',
+   Rain: 'rain.svg',
+   Thunderstorm: 'thunderstorm.svg',
+   Snow: 'snow.svg',
+   Unknown: 'unknown.svg',
 }
 
 const GEOCODING_API = {
@@ -142,7 +131,7 @@ const fetchWeather = async (data) => {
                regex: CURRENT_WEATHER_API.regex['longitude']
             },
             {
-               data: ENV['apiKey'],
+               data: OPENWEATHER_API_KEY,
                regex: CURRENT_WEATHER_API.regex['apiKey']
             },
          ]
@@ -174,11 +163,11 @@ const fetchLocation = async (locationName) => {
                regex: GEOCODING_API.regex['cityName']
             },
             {
-               data: ENV['retrievalLimit'],
+               data: RETRIEVAL_LIMIT,
                regex: GEOCODING_API.regex['retrievalLimit']
             },
             {
-               data: ENV['apiKey'],
+               data: OPENWEATHER_API_KEY,
                regex: GEOCODING_API.regex['apiKey']
             },
 
